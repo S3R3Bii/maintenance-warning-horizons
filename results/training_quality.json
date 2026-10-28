@@ -1,0 +1,10 @@
+{
+  "source_rows": 20631,
+  "eligible_windows": 18731,
+  "engines": 100,
+  "feature_count": 88,
+  "fit_windows": 12800,
+  "tuning_windows": 2925,
+  "calibration_windows": 3006,
+  "data_kind": "NASA simulation benchmark"
+}

@@ -1,0 +1,34 @@
+{
+  "source_url": "https://phm-datasets.s3.amazonaws.com/NASA/6.+Turbofan+Engine+Degradation+Simulation+Data+Set.zip",
+  "archive_sha256": "c9c5dec12a945a82e8bb4446589d7fb3cc057b5e5d81fa1a12e25ee9912ad3b2",
+  "retrieved_utc": "2026-10-28T19:34:47.278773+00:00",
+  "source_kind": "NASA simulation benchmark, not measured commercial operations",
+  "redistribution": "Raw members/original paper excluded; source access via official mirror",
+  "files": [
+    {
+      "file": "data/raw/train_FD001.txt",
+      "bytes": 3515356,
+      "sha256": "963b5e22825b34d8b21c69e1aeb4af3e647050eb672ee8834ba4b5d91d2de0f8"
+    },
+    {
+      "file": "data/raw/test_FD001.txt",
+      "bytes": 2228855,
+      "sha256": "3cda7109ce17bafb5443f2ac926cfcf88154b941b8c4cf95eb55d1ddd6f52851"
+    },
+    {
+      "file": "data/raw/RUL_FD001.txt",
+      "bytes": 429,
+      "sha256": "a19c8ec94931949d0485bdc35118206e9c81c4547b422efb9cf86f4ceddbceca"
+    },
+    {
+      "file": "data/raw/test_FD002.txt",
+      "bytes": 5734587,
+      "sha256": "de7b5bf7e998a985c378488480528b7c02cff1406a46740def362dda8d9b4e02"
+    },
+    {
+      "file": "data/raw/RUL_FD002.txt",
+      "bytes": 1110,
+      "sha256": "c851dd96a6ea6998d3c4a8f834d3c8013aa90e93a6ed950dc826ad0655b2906b"
+    }
+  ]
+}

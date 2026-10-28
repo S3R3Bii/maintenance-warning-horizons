@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "search_candidates": 15,
+  "tuning_engines": 15,
+  "calibration_engines": 15,
+  "metric_recomputation": "Independent scalar arithmetic for every candidate and calibration maximum/order statistic"
+}
