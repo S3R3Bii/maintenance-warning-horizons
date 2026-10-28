@@ -1,0 +1,21 @@
+{
+  "timestamp_utc": "2026-10-28T22:44:10.157307+00:00",
+  "status": "PASS_SCOPED_GITHUB_EDITION",
+  "grade": 4,
+  "pages": 6,
+  "criteria": {
+    "correctness": "PASS: all numerical tokens match the reviewed source and all referenced figure bytes match",
+    "rendered_layout": "PASS: all current pages inspected in rendered review sheets; no clipped text, overlap or missing figures observed",
+    "privacy": "PASS: source and extracted PDF text scanned; no attachments or JavaScript; only explicit reviewed files included",
+    "scope": "PASS: independent study only; not peer reviewed; formal-publication projects excluded"
+  },
+  "base_analysis_commit": "4c11698df2abb704bdfa8fbbdc5974560150f005",
+  "public_files_sha256": {
+    "paper/main.tex": "51575ba33f20e774b8760a4abe76cbdf622334a18db1e9add236e3fd1bea5e47",
+    "paper/manuscript.pdf": "4ce8b06d60e10998c023c1c4e926cd0ecd4fc88409ec0caf494ddab307ed3b72",
+    "paper/images/decision-summary.pdf": "3c7fce13a4c3d797b3e730d6593a24e252dc2b70683379a83e5fb3c2c69647da",
+    "paper/images/optimization-evidence.pdf": "085a00c961a844f92f88d3249116bd7873c429e7ef3d978d93dce8bba210e4eb",
+    "paper/images/uncertainty-tradeoff.pdf": "b5793d948be73bcc7d794e7adf9209c256923a05b21d40bc8f97b6efb7ed3630"
+  },
+  "limitations": "This is a publication-format check. It reuses unchanged scientific evidence and does not establish peer review, novelty, deployment or universal secret detection."
+}

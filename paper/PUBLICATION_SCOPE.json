@@ -1,0 +1,13 @@
+{
+  "scope": "independent-program-study",
+  "study_id": "37",
+  "formal_submission_target": false,
+  "authorization": "Owner explicitly authorized GitHub publication of these study manuscripts on 28 October 2026; formal-publication projects including Azure optimization remain excluded.",
+  "public_files": {
+    "paper/main.tex": "51575ba33f20e774b8760a4abe76cbdf622334a18db1e9add236e3fd1bea5e47",
+    "paper/manuscript.pdf": "4ce8b06d60e10998c023c1c4e926cd0ecd4fc88409ec0caf494ddab307ed3b72",
+    "paper/images/decision-summary.pdf": "3c7fce13a4c3d797b3e730d6593a24e252dc2b70683379a83e5fb3c2c69647da",
+    "paper/images/optimization-evidence.pdf": "085a00c961a844f92f88d3249116bd7873c429e7ef3d978d93dce8bba210e4eb",
+    "paper/images/uncertainty-tradeoff.pdf": "b5793d948be73bcc7d794e7adf9209c256923a05b21d40bc8f97b6efb7ed3630"
+  }
+}

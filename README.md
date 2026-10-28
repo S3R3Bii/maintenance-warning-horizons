@@ -1,5 +1,7 @@
 # Remaining-life estimates that earn their inspection budget
 
+[Research manuscript: PDF and LaTeX](paper/README.md)
+
 **A sensor model improves inspection capture in the matched simulation condition but underperforms the age-only baseline across operating conditions.** This study connects model error to a concrete decision: which engines enter a batch with room to inspect about 10% of them?
 
 **Retrospective numerical correction:** an initial floating-moment implementation disagreed across two Linux workers. Original results and failures are retained in `results/corrections/`. The corrected version preserves source precision with exact integer sensor moments and retains binary feature fingerprints; the grid, split and evaluation tolerance are unchanged. The original test was already inspected, so these corrected results are retrospective.
@@ -51,6 +53,6 @@ The clean replay refits all 15 configurations, recalibrates, evaluates both test
 - [Prespecified protocol](PROTOCOL.md) and [model validation standard](MODEL_VALIDATION_STANDARD.md).
 - [Search results](results/search.csv), [frozen selection](results/selection.json), [test results](results/test_summary.json), [independent verification](results/verification_test.json).
 - Six contracts test future-input isolation, engine boundaries, label exclusion, equal engine weighting and budget/tie behavior. Independent actual-source feature checks cover six declared windows per partition, not every feature row.
-- [Source provenance and publication boundary](SOURCES.md). Raw source files, source paper, manuscript drafts and fitted binary models are excluded from GitHub. Original code and derived evidence are public; no blanket license for NASA source data is asserted.
+- [Source provenance and publication boundary](SOURCES.md). Raw source files, source paper and fitted binary models are excluded from GitHub. Original code and derived evidence are public; no blanket license for NASA source data is asserted.
 
-The private LaTeX manuscript is a research draft, not a submitted or peer-reviewed article. All results describe this benchmark analysis only.
+The [GitHub research manuscript](paper/README.md) has not been peer reviewed or accepted for formal publication. All results describe this benchmark analysis only.
