@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "prediction_rows": 80532,
+  "engine_partitions": [
+    100,
+    259
+  ],
+  "metric_recomputation": "Independent MSE/MAE, calibration, intervals, strata, trajectory coverage, inspection ranks and paired-engine bootstrap"
+}
