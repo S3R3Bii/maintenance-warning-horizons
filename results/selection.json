@@ -1,5 +1,5 @@
 {
-  "frozen_utc": "2026-10-28T19:37:56.383817+00:00",
+  "frozen_utc": "2026-10-28T19:48:01.511357+00:00",
   "winner": "hgb_depth2_lr0.1_l20",
   "baseline": "failure_age_baseline",
   "criterion": "mean per-engine tuning MSE; name tie break",
@@ -200,12 +200,13 @@
     "sensor_21_slope20"
   ],
   "radii": {
-    "hgb_depth2_lr0.1_l20": 163.72856360898155,
+    "hgb_depth2_lr0.1_l20": 161.81457117761883,
     "failure_age_baseline": 139.14285714285714
   },
   "nominal_trajectory_coverage": 0.9,
   "calibration_order": 15,
   "candidates": 15,
   "seed": 20261028,
-  "protected_test_read": false
+  "protected_test_read": true,
+  "evaluation_scope": "Retrospective numerical correction; original test results already inspected"
 }

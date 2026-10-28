@@ -1,0 +1,12 @@
+{
+  "timestamp_utc": "2026-10-28T19:47:33.582437+00:00",
+  "state": "TARGETED_REPRODUCIBILITY_CORRECTION_UNVERIFIED",
+  "failed_head": "24fbd04e57f01b97c97d6000b63ef1baa705572f",
+  "successful_push_run": "https://github.com/S3R3Bii/maintenance-warning-horizons/actions/runs/40756907395",
+  "failed_pr_run": "https://github.com/S3R3Bii/maintenance-warning-horizons/actions/runs/40756939897",
+  "observed": "Same Git tree produced different validation scores and a different selected model across two Linux workers. Export arithmetic passed both.",
+  "hypothesis": "Near-constant source channels and floating rolling-moment cancellation can change tree bins/split ties; exact old-worker feature fingerprints were not retained, so the precise cause is not yet proved.",
+  "repair": "Round-trip source parsing, exact four-decimal integer sensor moments with checked overflow bounds, correctly rounded scalar square roots; source precision checked, no feature removed, grid/splits/targets/metrics/tolerances unchanged. New binary feature fingerprints must agree in clean replays.",
+  "evaluation_scope": "Retrospective after original test inspection; original predictions, summaries and private paper preserved; no fresh confirmatory claim",
+  "next_step": "One targeted corrected refit and current clean CI comparison; leave incomplete if discrepancy remains."
+}

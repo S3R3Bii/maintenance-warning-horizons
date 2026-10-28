@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "windows_by_partition": {
+    "train_FD001": 6
+  },
+  "scope": "Six real source windows per partition, all21 sensors and three summaries; spot audit, not an exhaustive independent feature implementation"
+}

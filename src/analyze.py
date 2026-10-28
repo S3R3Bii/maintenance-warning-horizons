@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor,HistGradientBoostingRegressor
 from threadpoolctl import threadpool_limits
-from prepare import ROOT,FEATURES,features,read_source,weights
+from prepare import ROOT,FEATURES,features,read_source,weights,feature_fingerprint
 
 RESULTS=ROOT/'results';CACHE=ROOT/'data/cache';SEED=20261028
 
@@ -67,13 +67,13 @@ def validate():
         scores=table.assign(error=abs(table.prediction-table.rul)).groupby('engine').error.max().sort_values().to_numpy();order=math.ceil((len(scores)+1)*.9);assert order<=len(scores)
         radii[name]=float(scores[order-1])
     pd.concat(calibration_records).to_csv(RESULTS/'calibration_predictions.csv.gz',index=False,compression='gzip')
-    dump('selection.json',dict(frozen_utc=datetime.now(timezone.utc).isoformat(),winner=winner,baseline='failure_age_baseline',criterion='mean per-engine tuning MSE; name tie break',fit_engines=list(range(1,71)),tuning_engines=list(range(71,86)),calibration_engines=list(range(86,101)),features=FEATURES,radii=radii,nominal_trajectory_coverage=.9,calibration_order=15,candidates=len(trials),seed=SEED,protected_test_read=False))
-    dump('training_quality.json',dict(source_rows=len(raw),eligible_windows=len(frame),engines=int(raw.engine.nunique()),feature_count=len(FEATURES),fit_windows=len(fitting),tuning_windows=len(tuning),calibration_windows=len(calibration),data_kind='NASA simulation benchmark'))
+    dump('selection.json',dict(frozen_utc=datetime.now(timezone.utc).isoformat(),winner=winner,baseline='failure_age_baseline',criterion='mean per-engine tuning MSE; name tie break',fit_engines=list(range(1,71)),tuning_engines=list(range(71,86)),calibration_engines=list(range(86,101)),features=FEATURES,radii=radii,nominal_trajectory_coverage=.9,calibration_order=15,candidates=len(trials),seed=SEED,protected_test_read=True,evaluation_scope='Retrospective numerical correction; original test results already inspected'))
+    dump('training_quality.json',dict(source_rows=len(raw),eligible_windows=len(frame),engines=int(raw.engine.nunique()),feature_count=len(FEATURES),feature_sha256=feature_fingerprint(frame),fit_windows=len(fitting),tuning_windows=len(tuning),calibration_windows=len(calibration),data_kind='NASA simulation benchmark',evaluation_scope='Retrospective correction after original test inspection; integer-moment feature arithmetic'))
 
 def test():
-    selection=json.loads((RESULTS/'selection.json').read_text());tables=[];summary=[];bootstrap=[];rng=np.random.default_rng(SEED)
+    selection=json.loads((RESULTS/'selection.json').read_text());tables=[];summary=[];bootstrap=[];fingerprints={};rng=np.random.default_rng(SEED)
     for partition in ['test_FD001','test_FD002']:
-        frame=features(read_source(partition));partition_tables={}
+        frame=features(read_source(partition));fingerprints[partition]=feature_fingerprint(frame);partition_tables={}
         for name in [selection['winner'],selection['baseline']]:
             model=joblib.load(CACHE/(name+'.joblib'));table=prediction_table(model,frame,name);q=selection['radii'][name]
             table['lower']=np.maximum(0,table.prediction-q);table['upper']=table.prediction+q;table['covered']=(table.rul>=table.lower)&(table.rul<=table.upper);tables.append(table);partition_tables[name]=table
@@ -87,7 +87,7 @@ def test():
         difference=unit_errors[0]-unit_errors[1];samples=rng.integers(0,len(difference),size=(2000,len(difference)));means=difference[samples].mean(axis=1)
         bootstrap.append(dict(partition=partition,quantity='selected minus baseline engine MSE',engines=len(difference),draws=2000,seed=SEED,mean=float(difference.mean()),percentile95=np.quantile(means,[.025,.975]).tolist(),scope='Conditional on these simulated benchmark engines; paired engine resampling'))
     pd.concat(tables).to_csv(RESULTS/'test_predictions.csv.gz',index=False,compression='gzip')
-    dump('test_summary.json',dict(evaluated_utc=datetime.now(timezone.utc).isoformat(),results=summary,bootstrap=bootstrap))
+    dump('test_summary.json',dict(evaluated_utc=datetime.now(timezone.utc).isoformat(),evaluation_scope='Retrospective correction after original test inspection',feature_sha256=fingerprints,results=summary,bootstrap=bootstrap))
     print(json.dumps({'evaluated_partitions':2,'models_per_partition':2,'output':'results/test_summary.json'}))
 
 if __name__=='__main__':

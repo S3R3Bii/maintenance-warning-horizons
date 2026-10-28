@@ -37,3 +37,7 @@ Compare error, uncertainty width/coverage and inspection capture together. No in
 ## Release gates
 
 Raw hashes/schema/counts and source labels reconcile. Fit/tune/calibration/test identities are disjoint by source definition. Past-only window features receive independent spot checks; all prediction/error/coverage/inspection calculations and calibration order statistics are independently recomputed. Relevant contracts cover future-input independence, engine-boundary isolation, label exclusion, unit accounting and budget/tie behavior. Render figures and a private manuscript. Public outputs exclude raw source members, original source paper, credentials, private information and manuscript drafts. Retain failures and a current-version receipt; source or portability blockers keep the release incomplete.
+
+## Dated numerical correction after original test inspection
+
+28October2026: two Linux workers disagreed on the selected configuration. Original results and failure evidence are preserved in `results/corrections/`. Source parsing now uses round-trip floats and trailing sensor moments use exact source-four-decimal integer sums, sums of squares and centered sums, with explicit precision/overflow checks. Binary feature fingerprints are retained. The grid, split, targets, loss and numerical tolerance remain unchanged. The corrected evaluation is **retrospective**, not a new protected-test claim. Near-constant floating feature instability is a hypothesis until clean-worker evidence is available.

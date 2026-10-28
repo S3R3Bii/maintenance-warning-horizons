@@ -16,7 +16,7 @@ def fixture():
 
 class Contracts(unittest.TestCase):
     def test_future_values_cannot_change_past_features(self):
-        a=fixture();b=a.copy();b.loc[b.cycle>25,'sensor_1']=1e9
+        a=fixture();b=a.copy();b['sensor_1']=b.sensor_1.astype(float);b.loc[b.cycle>25,'sensor_1']=9999.25
         left=features(a).query('cycle<=25')[FEATURES];right=features(b).query('cycle<=25')[FEATURES]
         np.testing.assert_array_equal(left.to_numpy(),right.to_numpy())
 
@@ -24,6 +24,11 @@ class Contracts(unittest.TestCase):
         result=features(fixture());row=result.query('engine==2 and cycle==20').iloc[0]
         self.assertAlmostEqual(row.sensor_1_mean20,30.5);self.assertAlmostEqual(row.sensor_1_sd20,np.std(np.arange(21,41)));self.assertAlmostEqual(row.sensor_1_slope20,1)
         self.assertTrue((result.cycle>=20).all());self.assertEqual(len(result),22)
+
+    def test_constant_sensor_has_exact_zero_variance(self):
+        frame=fixture();frame['sensor_1']=9060.1234;result=features(frame)
+        np.testing.assert_array_equal(result.sensor_1_sd20,np.zeros(len(result)))
+        np.testing.assert_array_equal(result.sensor_1_slope20,np.zeros(len(result)))
 
     def test_labels_do_not_affect_features(self):
         a=fixture();b=a.copy();b['rul']=9999

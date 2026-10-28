@@ -1,0 +1,446 @@
+{
+  "evaluated_utc": "2026-10-28T19:48:47.697759+00:00",
+  "evaluation_scope": "Retrospective correction after original test inspection",
+  "feature_sha256": {
+    "test_FD001": "7645d844e2c747696225c5fe1fa22d7040edcc9e5e848c54a26f08c770678d45",
+    "test_FD002": "f82c46248292722e91a018c5a3c74cb8e8558dddbc6a0bc2c1188701d393c222"
+  },
+  "results": [
+    {
+      "partition": "test_FD001",
+      "model": "hgb_depth2_lr0.1_l20",
+      "engines": 100,
+      "windows": 11196,
+      "engine_mse": 1292.9619416541311,
+      "engine_rmse": 35.95777998784312,
+      "engine_mae": 26.33182197530366,
+      "pooled_mse": 1672.4089034200765,
+      "last_mse": 389.59078079514836,
+      "last_mae": 14.9686891371014,
+      "point_coverage": 1.0,
+      "trajectory_coverage": 1.0,
+      "mean_interval_width": 278.4038993161835,
+      "radius": 161.81457117761883,
+      "bands": [
+        {
+          "band": "0-30",
+          "windows": 332,
+          "mse": 95.56075222770106,
+          "coverage": 1.0
+        },
+        {
+          "band": "31-90",
+          "windows": 2245,
+          "mse": 459.44836891530355,
+          "coverage": 1.0
+        },
+        {
+          "band": "above90",
+          "windows": 8619,
+          "mse": 2049.0894912097365,
+          "coverage": 1.0
+        }
+      ],
+      "inspection": {
+        "engines": 100,
+        "budget": 10,
+        "selected_engines": [
+          20,
+          34,
+          42,
+          76,
+          82,
+          68,
+          81,
+          49,
+          56,
+          35
+        ],
+        "lead_times": [
+          16,
+          7,
+          10,
+          10,
+          9,
+          8,
+          8,
+          21,
+          15,
+          11
+        ],
+        "horizons": [
+          {
+            "horizon": 15,
+            "eligible": 10,
+            "captured": 8,
+            "recall": 0.8,
+            "precision": 0.8
+          },
+          {
+            "horizon": 30,
+            "eligible": 25,
+            "captured": 10,
+            "recall": 0.4,
+            "precision": 1.0
+          },
+          {
+            "horizon": 60,
+            "eligible": 39,
+            "captured": 10,
+            "recall": 0.2564102564102564,
+            "precision": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "partition": "test_FD001",
+      "model": "failure_age_baseline",
+      "engines": 100,
+      "windows": 11196,
+      "engine_mse": 1892.4610106363484,
+      "engine_rmse": 43.50242534200074,
+      "engine_mae": 33.472229943947355,
+      "pooled_mse": 2473.8460000291648,
+      "last_mse": 1587.3059183673467,
+      "last_mae": 31.390000000000004,
+      "point_coverage": 1.0,
+      "trajectory_coverage": 1.0,
+      "mean_interval_width": 245.30794161180012,
+      "radius": 139.14285714285714,
+      "bands": [
+        {
+          "band": "0-30",
+          "windows": 332,
+          "mse": 883.7118883698059,
+          "coverage": 1.0
+        },
+        {
+          "band": "31-90",
+          "windows": 2245,
+          "mse": 1073.089668651425,
+          "coverage": 1.0
+        },
+        {
+          "band": "above90",
+          "windows": 8619,
+          "mse": 2899.9537258690452,
+          "coverage": 1.0
+        }
+      ],
+      "inspection": {
+        "engines": 100,
+        "budget": 10,
+        "selected_engines": [
+          12,
+          34,
+          49,
+          62,
+          76,
+          81,
+          91,
+          93,
+          35,
+          100
+        ],
+        "lead_times": [
+          124,
+          7,
+          21,
+          54,
+          10,
+          8,
+          38,
+          85,
+          11,
+          20
+        ],
+        "horizons": [
+          {
+            "horizon": 15,
+            "eligible": 10,
+            "captured": 4,
+            "recall": 0.4,
+            "precision": 0.4
+          },
+          {
+            "horizon": 30,
+            "eligible": 25,
+            "captured": 6,
+            "recall": 0.24,
+            "precision": 0.6
+          },
+          {
+            "horizon": 60,
+            "eligible": 39,
+            "captured": 8,
+            "recall": 0.20512820512820512,
+            "precision": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "partition": "test_FD002",
+      "model": "hgb_depth2_lr0.1_l20",
+      "engines": 259,
+      "windows": 29070,
+      "engine_mse": 2393.634016759009,
+      "engine_rmse": 48.92477916924111,
+      "engine_mae": 40.095152997150024,
+      "pooled_mse": 2831.0889724592566,
+      "last_mse": 4824.015284100085,
+      "last_mae": 59.18609042516918,
+      "point_coverage": 0.9979360165118679,
+      "trajectory_coverage": 0.9922779922779923,
+      "mean_interval_width": 300.8917729888204,
+      "radius": 161.81457117761883,
+      "bands": [
+        {
+          "band": "0-30",
+          "windows": 1087,
+          "mse": 10000.595474824324,
+          "coverage": 1.0
+        },
+        {
+          "band": "31-90",
+          "windows": 6165,
+          "mse": 4025.4180743792704,
+          "coverage": 1.0
+        },
+        {
+          "band": "above90",
+          "windows": 21818,
+          "mse": 2136.419778151451,
+          "coverage": 0.9972499770831423
+        }
+      ],
+      "inspection": {
+        "engines": 259,
+        "budget": 25,
+        "selected_engines": [
+          133,
+          186,
+          245,
+          134,
+          185,
+          257,
+          208,
+          94,
+          173,
+          21,
+          33,
+          46,
+          55,
+          60,
+          73,
+          78,
+          87,
+          109,
+          132,
+          145,
+          160,
+          163,
+          172,
+          50,
+          239
+        ],
+        "lead_times": [
+          38,
+          10,
+          16,
+          9,
+          19,
+          56,
+          8,
+          97,
+          14,
+          97,
+          53,
+          112,
+          103,
+          73,
+          78,
+          52,
+          21,
+          35,
+          39,
+          98,
+          42,
+          88,
+          107,
+          13,
+          101
+        ],
+        "horizons": [
+          {
+            "horizon": 15,
+            "eligible": 46,
+            "captured": 5,
+            "recall": 0.10869565217391304,
+            "precision": 0.2
+          },
+          {
+            "horizon": 30,
+            "eligible": 61,
+            "captured": 8,
+            "recall": 0.13114754098360656,
+            "precision": 0.32
+          },
+          {
+            "horizon": 60,
+            "eligible": 102,
+            "captured": 15,
+            "recall": 0.14705882352941177,
+            "precision": 0.6
+          }
+        ]
+      }
+    },
+    {
+      "partition": "test_FD002",
+      "model": "failure_age_baseline",
+      "engines": 259,
+      "windows": 29070,
+      "engine_mse": 2276.6314961277308,
+      "engine_rmse": 47.714059732197704,
+      "engine_mae": 38.01115133105368,
+      "pooled_mse": 3104.8918914934393,
+      "last_mse": 1718.382554566228,
+      "last_mae": 33.71263099834528,
+      "point_coverage": 0.973890608875129,
+      "trajectory_coverage": 0.9845559845559846,
+      "mean_interval_width": 241.27204776647497,
+      "radius": 139.14285714285714,
+      "bands": [
+        {
+          "band": "0-30",
+          "windows": 1087,
+          "mse": 979.1012147269212,
+          "coverage": 1.0
+        },
+        {
+          "band": "31-90",
+          "windows": 6165,
+          "mse": 1560.0437558965193,
+          "coverage": 1.0
+        },
+        {
+          "band": "above90",
+          "windows": 21818,
+          "mse": 3647.321226061237,
+          "coverage": 0.9652122101017508
+        }
+      ],
+      "inspection": {
+        "engines": 259,
+        "budget": 25,
+        "selected_engines": [
+          1,
+          17,
+          24,
+          41,
+          58,
+          62,
+          64,
+          65,
+          68,
+          70,
+          76,
+          80,
+          84,
+          91,
+          97,
+          110,
+          115,
+          119,
+          129,
+          137,
+          140,
+          143,
+          171,
+          185,
+          193
+        ],
+        "lead_times": [
+          18,
+          68,
+          77,
+          44,
+          26,
+          39,
+          14,
+          11,
+          56,
+          17,
+          36,
+          15,
+          17,
+          9,
+          31,
+          80,
+          91,
+          106,
+          79,
+          88,
+          55,
+          81,
+          36,
+          19,
+          37
+        ],
+        "horizons": [
+          {
+            "horizon": 15,
+            "eligible": 46,
+            "captured": 4,
+            "recall": 0.08695652173913043,
+            "precision": 0.16
+          },
+          {
+            "horizon": 30,
+            "eligible": 61,
+            "captured": 9,
+            "recall": 0.14754098360655737,
+            "precision": 0.36
+          },
+          {
+            "horizon": 60,
+            "eligible": 102,
+            "captured": 17,
+            "recall": 0.16666666666666666,
+            "precision": 0.68
+          }
+        ]
+      }
+    }
+  ],
+  "bootstrap": [
+    {
+      "partition": "test_FD001",
+      "quantity": "selected minus baseline engine MSE",
+      "engines": 100,
+      "draws": 2000,
+      "seed": 20261028,
+      "mean": -599.4990689822178,
+      "percentile95": [
+        -900.827336715673,
+        -323.18119320388263
+      ],
+      "scope": "Conditional on these simulated benchmark engines; paired engine resampling"
+    },
+    {
+      "partition": "test_FD002",
+      "quantity": "selected minus baseline engine MSE",
+      "engines": 259,
+      "draws": 2000,
+      "seed": 20261028,
+      "mean": 117.0025206312777,
+      "percentile95": [
+        -173.72955698513454,
+        396.48627674951786
+      ],
+      "scope": "Conditional on these simulated benchmark engines; paired engine resampling"
+    }
+  ]
+}

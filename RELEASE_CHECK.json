@@ -1,0 +1,50 @@
+{
+  "timestamp_utc": "2026-10-28T19:54:06.490714+00:00",
+  "state": "CORRECTED_LOCAL_PASS_REMOTE_CI_PENDING",
+  "selection_commit": "5dc04ed88d465badea580599ad4565d3fbb2c42c",
+  "criteria": [
+    {
+      "criterion": "Source and information boundary",
+      "grade": "PASS",
+      "evidence": "Source hash/schema/targets pass; six contracts including exact zero-variance source channel,18 source-window audits, no raw members public"
+    },
+    {
+      "criterion": "Finite optimization and numerical proof",
+      "grade": "PASS",
+      "evidence": "All15 candidate predictions/MSE retained; calibration maxima independently recomputed; held-out errors, ranks, intervals and bootstrap independently verified"
+    },
+    {
+      "criterion": "Reproducibility",
+      "grade": "LOCAL_PASS_REMOTE_UNKNOWN",
+      "evidence": "Original Linux push pass and PR failure preserved; corrected local full replay pass; exact current clean Linux checks required"
+    },
+    {
+      "criterion": "Decision-first presentation",
+      "grade": "PASS",
+      "evidence": "README compares RMSE, capture, recall, transfer limits and next experiment; three figures inspected after legend fix"
+    },
+    {
+      "criterion": "Private manuscript",
+      "grade": "PASS",
+      "evidence": "Six-page final private LaTeX/PDF; orphan reference fixed; all page content inspected; draft not published"
+    },
+    {
+      "criterion": "Privacy and publication boundary",
+      "grade": "PASS_BOUNDED",
+      "evidence": "47 intended files checked; no high-confidence secret/private-path hits or forbidden raw/manuscript files"
+    }
+  ],
+  "review_rounds": 3,
+  "review_workload": "Under30 review-oriented tool calls; execution and review elapsed since19:36UTC remain under45 minutes; account usage is shared and not task billing",
+  "material_changes": "Source-precision integer moments after two Linux workers disagreed; full original results and failures preserved; same grid, loss and tolerance; six tests and fresh local replay pass; all current figures and six private PDF pages inspected",
+  "stop_reason": "Final targeted numerical correction; no further unchanged retry if current clean CI disagrees",
+  "artifact_sha256": {
+    "README.md": "e018ca509db66959a715f75d386abe0f796ff1fead227b68d6af4bcb93ae579d",
+    "src/analyze.py": "d92db68b518d00325fbcf5dda3dc3632dbbbbb7ef133fdee814e039775e235f1",
+    "src/verify.py": "d121bf966493030a720c0211bed2784a0ba7d97036eec8cb88b4e25f388b9ef0",
+    "src/prepare.py": "7bd2be08ce9d6a618caa4cacb2e23b8ee432032ae0588df32a1200de64137081",
+    "results/selection.json": "3571e55c039ec2252647926a8fad1d2f85f4ed255228af20ef0447beafde5a0a",
+    "results/test_summary.json": "c73a0e6ccfef80a5c88c65df487e9e53fc3200cd9fd7b61ac6bc158351148b25"
+  },
+  "evaluation_scope": "Retrospective"
+}
