@@ -207,5 +207,6 @@
   "calibration_order": 15,
   "candidates": 15,
   "seed": 20261028,
-  "protected_test_read": false
+  "protected_test_read": true,
+  "evaluation_scope": "Retrospective numerical correction; original test results already inspected"
 }

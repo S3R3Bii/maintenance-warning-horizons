@@ -67,7 +67,7 @@ def validate():
         scores=table.assign(error=abs(table.prediction-table.rul)).groupby('engine').error.max().sort_values().to_numpy();order=math.ceil((len(scores)+1)*.9);assert order<=len(scores)
         radii[name]=float(scores[order-1])
     pd.concat(calibration_records).to_csv(RESULTS/'calibration_predictions.csv.gz',index=False,compression='gzip')
-    dump('selection.json',dict(frozen_utc=datetime.now(timezone.utc).isoformat(),winner=winner,baseline='failure_age_baseline',criterion='mean per-engine tuning MSE; name tie break',fit_engines=list(range(1,71)),tuning_engines=list(range(71,86)),calibration_engines=list(range(86,101)),features=FEATURES,radii=radii,nominal_trajectory_coverage=.9,calibration_order=15,candidates=len(trials),seed=SEED,protected_test_read=False))
+    dump('selection.json',dict(frozen_utc=datetime.now(timezone.utc).isoformat(),winner=winner,baseline='failure_age_baseline',criterion='mean per-engine tuning MSE; name tie break',fit_engines=list(range(1,71)),tuning_engines=list(range(71,86)),calibration_engines=list(range(86,101)),features=FEATURES,radii=radii,nominal_trajectory_coverage=.9,calibration_order=15,candidates=len(trials),seed=SEED,protected_test_read=True,evaluation_scope='Retrospective numerical correction; original test results already inspected'))
     dump('training_quality.json',dict(source_rows=len(raw),eligible_windows=len(frame),engines=int(raw.engine.nunique()),feature_count=len(FEATURES),feature_sha256=feature_fingerprint(frame),fit_windows=len(fitting),tuning_windows=len(tuning),calibration_windows=len(calibration),data_kind='NASA simulation benchmark',evaluation_scope='Retrospective correction after original test inspection; integer-moment feature arithmetic'))
 
 def test():

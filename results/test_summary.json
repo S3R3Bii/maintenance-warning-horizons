@@ -1,38 +1,43 @@
 {
-  "evaluated_utc": "2026-10-28T19:39:15.198794+00:00",
+  "evaluated_utc": "2026-10-28T19:48:47.697759+00:00",
+  "evaluation_scope": "Retrospective correction after original test inspection",
+  "feature_sha256": {
+    "test_FD001": "7645d844e2c747696225c5fe1fa22d7040edcc9e5e848c54a26f08c770678d45",
+    "test_FD002": "f82c46248292722e91a018c5a3c74cb8e8558dddbc6a0bc2c1188701d393c222"
+  },
   "results": [
     {
       "partition": "test_FD001",
       "model": "hgb_depth2_lr0.1_l20",
       "engines": 100,
       "windows": 11196,
-      "engine_mse": 1283.255109496609,
-      "engine_rmse": 35.82255029302924,
-      "engine_mae": 26.29220650485945,
-      "pooled_mse": 1662.2019073180797,
-      "last_mse": 387.8610918434549,
-      "last_mae": 14.981949055873821,
+      "engine_mse": 1292.9619416541311,
+      "engine_rmse": 35.95777998784312,
+      "engine_mae": 26.33182197530366,
+      "pooled_mse": 1672.4089034200765,
+      "last_mse": 389.59078079514836,
+      "last_mae": 14.9686891371014,
       "point_coverage": 1.0,
       "trajectory_coverage": 1.0,
-      "mean_interval_width": 280.5689095581033,
-      "radius": 163.72856360898155,
+      "mean_interval_width": 278.4038993161835,
+      "radius": 161.81457117761883,
       "bands": [
         {
           "band": "0-30",
           "windows": 332,
-          "mse": 99.5628091300362,
+          "mse": 95.56075222770106,
           "coverage": 1.0
         },
         {
           "band": "31-90",
           "windows": 2245,
-          "mse": 451.6014751731594,
+          "mse": 459.44836891530355,
           "coverage": 1.0
         },
         {
           "band": "above90",
           "windows": 8619,
-          "mse": 2037.7204304372092,
+          "mse": 2049.0894912097365,
           "coverage": 1.0
         }
       ],
@@ -43,9 +48,9 @@
           20,
           34,
           42,
-          68,
           76,
           82,
+          68,
           81,
           49,
           56,
@@ -55,9 +60,9 @@
           16,
           7,
           10,
-          8,
           10,
           9,
+          8,
           8,
           21,
           15,
@@ -180,34 +185,34 @@
       "model": "hgb_depth2_lr0.1_l20",
       "engines": 259,
       "windows": 29070,
-      "engine_mse": 2260.687551411221,
-      "engine_rmse": 47.54668812242574,
-      "engine_mae": 39.02348679298593,
-      "pooled_mse": 2711.6305443825086,
-      "last_mse": 4534.185372357159,
-      "last_mae": 57.549610703646046,
-      "point_coverage": 0.9981080151358789,
+      "engine_mse": 2393.634016759009,
+      "engine_rmse": 48.92477916924111,
+      "engine_mae": 40.095152997150024,
+      "pooled_mse": 2831.0889724592566,
+      "last_mse": 4824.015284100085,
+      "last_mae": 59.18609042516918,
+      "point_coverage": 0.9979360165118679,
       "trajectory_coverage": 0.9922779922779923,
-      "mean_interval_width": 302.71693609274337,
-      "radius": 163.72856360898155,
+      "mean_interval_width": 300.8917729888204,
+      "radius": 161.81457117761883,
       "bands": [
         {
           "band": "0-30",
           "windows": 1087,
-          "mse": 9716.724949085046,
+          "mse": 10000.595474824324,
           "coverage": 1.0
         },
         {
           "band": "31-90",
           "windows": 6165,
-          "mse": 3755.7767768468093,
+          "mse": 4025.4180743792704,
           "coverage": 1.0
         },
         {
           "band": "above90",
           "windows": 21818,
-          "mse": 2067.5889667377164,
-          "coverage": 0.9974791456595472
+          "mse": 2136.419778151451,
+          "coverage": 0.9972499770831423
         }
       ],
       "inspection": {
@@ -216,78 +221,78 @@
         "selected_engines": [
           133,
           186,
-          182,
-          257,
-          225,
-          208,
-          151,
-          50,
           245,
-          157,
-          42,
-          88,
-          242,
-          254,
-          255,
-          175,
           134,
           185,
-          226,
-          40,
-          207,
-          239,
-          110,
-          140,
-          248
+          257,
+          208,
+          94,
+          173,
+          21,
+          33,
+          46,
+          55,
+          60,
+          73,
+          78,
+          87,
+          109,
+          132,
+          145,
+          160,
+          163,
+          172,
+          50,
+          239
         ],
         "lead_times": [
           38,
           10,
-          14,
-          56,
-          11,
-          8,
-          115,
-          13,
           16,
-          171,
-          27,
-          79,
-          17,
-          48,
-          122,
-          142,
           9,
           19,
-          108,
-          37,
-          85,
-          101,
-          80,
-          55,
-          56
+          56,
+          8,
+          97,
+          14,
+          97,
+          53,
+          112,
+          103,
+          73,
+          78,
+          52,
+          21,
+          35,
+          39,
+          98,
+          42,
+          88,
+          107,
+          13,
+          101
         ],
         "horizons": [
           {
             "horizon": 15,
             "eligible": 46,
-            "captured": 6,
-            "recall": 0.13043478260869565,
-            "precision": 0.24
+            "captured": 5,
+            "recall": 0.10869565217391304,
+            "precision": 0.2
           },
           {
             "horizon": 30,
             "eligible": 61,
-            "captured": 10,
-            "recall": 0.16393442622950818,
-            "precision": 0.4
+            "captured": 8,
+            "recall": 0.13114754098360656,
+            "precision": 0.32
           },
           {
             "horizon": 60,
             "eligible": 102,
-            "captured": 16,
-            "recall": 0.1568627450980392,
-            "precision": 0.64
+            "captured": 15,
+            "recall": 0.14705882352941177,
+            "precision": 0.6
           }
         ]
       }
@@ -417,10 +422,10 @@
       "engines": 100,
       "draws": 2000,
       "seed": 20261028,
-      "mean": -609.2059011397397,
+      "mean": -599.4990689822178,
       "percentile95": [
-        -909.894949499964,
-        -333.67648121803927
+        -900.827336715673,
+        -323.18119320388263
       ],
       "scope": "Conditional on these simulated benchmark engines; paired engine resampling"
     },
@@ -430,10 +435,10 @@
       "engines": 259,
       "draws": 2000,
       "seed": 20261028,
-      "mean": -15.943944716509542,
+      "mean": 117.0025206312777,
       "percentile95": [
-        -290.0881893114315,
-        244.00351103413735
+        -173.72955698513454,
+        396.48627674951786
       ],
       "scope": "Conditional on these simulated benchmark engines; paired engine resampling"
     }

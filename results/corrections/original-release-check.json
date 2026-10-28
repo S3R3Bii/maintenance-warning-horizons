@@ -1,0 +1,49 @@
+{
+  "timestamp_utc": "2026-10-28T19:43:48.510644+00:00",
+  "state": "LOCAL_PASS_REMOTE_CI_PENDING",
+  "selection_commit": "5dc04ed88d465badea580599ad4565d3fbb2c42c",
+  "criteria": [
+    {
+      "criterion": "Source and information boundary",
+      "grade": "PASS",
+      "evidence": "Fixed archive/member hashes, schema checks, label reconstruction, five contracts and18 source-window spot audits; raw files excluded"
+    },
+    {
+      "criterion": "Finite optimization and numerical proof",
+      "grade": "PASS",
+      "evidence": "All15 candidate predictions/MSE retained; calibration maxima independently recomputed; held-out errors, ranks, intervals and bootstrap independently verified"
+    },
+    {
+      "criterion": "Reproducibility",
+      "grade": "LOCAL_PASS_REMOTE_UNKNOWN",
+      "evidence": "Separate-directory full Windows refit passes; GitHub Linux check required before merge/completion"
+    },
+    {
+      "criterion": "Decision-first presentation",
+      "grade": "PASS",
+      "evidence": "README compares RMSE, capture, recall, transfer limits and next experiment; three figures inspected after legend fix"
+    },
+    {
+      "criterion": "Private manuscript",
+      "grade": "PASS",
+      "evidence": "Six-page final private LaTeX/PDF; orphan reference fixed; all page content inspected; draft not published"
+    },
+    {
+      "criterion": "Privacy and publication boundary",
+      "grade": "PASS_BOUNDED",
+      "evidence": "33 intended files checked for forbidden paths/extensions, high-confidence secret patterns and local links; no findings; no universal secret-detection claim"
+    }
+  ],
+  "review_rounds": 2,
+  "review_workload": "Under20 review-oriented tool calls; elapsed wall time from19:36UTC includes execution, not an account billing estimate",
+  "material_changes": "Meaningful model test, decision figures, source-limited public package and private manuscript; legend overlap and reference orphan fixed",
+  "stop_reason": "Wait for exact current GitHub Linux replay; study remains incomplete until it passes",
+  "artifact_sha256": {
+    "README.md": "478399352a82b722fc556fbff0a7cc7b739ac98dccf725c66b57ab0e9a3d9b19",
+    "src/analyze.py": "b46cfc183cbeccfa8e847ee3845fe977b1b7107cb7dea05f25e103c079d44533",
+    "src/verify.py": "d121bf966493030a720c0211bed2784a0ba7d97036eec8cb88b4e25f388b9ef0",
+    "src/prepare.py": "9b0f9df41d2ccf87ea3e84bbafd1d07e1e2cadeb52d781536387bc117e1eb583",
+    "results/selection.json": "8a1a648ab7e4edf55dab9df83010050b38f2015077836ab742e8a04529b00b32",
+    "results/test_summary.json": "b67e3a82e98d275b9568346f5f1067bb08e85aa6508eb8cf4c2d920585492d08"
+  }
+}

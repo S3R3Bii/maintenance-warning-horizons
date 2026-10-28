@@ -16,7 +16,7 @@ def fixture():
 
 class Contracts(unittest.TestCase):
     def test_future_values_cannot_change_past_features(self):
-        a=fixture();b=a.copy();b.loc[b.cycle>25,'sensor_1']=9999.25
+        a=fixture();b=a.copy();b['sensor_1']=b.sensor_1.astype(float);b.loc[b.cycle>25,'sensor_1']=9999.25
         left=features(a).query('cycle<=25')[FEATURES];right=features(b).query('cycle<=25')[FEATURES]
         np.testing.assert_array_equal(left.to_numpy(),right.to_numpy())
 
