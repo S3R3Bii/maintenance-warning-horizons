@@ -3,8 +3,10 @@
   "eligible_windows": 18731,
   "engines": 100,
   "feature_count": 88,
+  "feature_sha256": "f9a4c783d61b22903b68cc6cbd9318faf577b4feaaa57969682765a60d209456",
   "fit_windows": 12800,
   "tuning_windows": 2925,
   "calibration_windows": 3006,
-  "data_kind": "NASA simulation benchmark"
+  "data_kind": "NASA simulation benchmark",
+  "evaluation_scope": "Retrospective correction after original test inspection; integer-moment feature arithmetic"
 }
