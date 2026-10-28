@@ -1,0 +1,9 @@
+{
+  "timestamp_utc": "2026-10-28T19:43:08.594558+00:00",
+  "status": "PASS_BOUNDED_SCAN",
+  "files_checked": 33,
+  "scope": "Tracked text, decompressed prediction CSVs, intended figures and README; forbidden paths/extensions, high-confidence key/private-path patterns and local Markdown links checked; no universal secret detection claim",
+  "findings": [],
+  "raw_source_members_excluded": true,
+  "manuscripts_excluded": true
+}
